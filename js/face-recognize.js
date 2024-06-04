@@ -1,10 +1,12 @@
 // script.js
 
 async function setup() {
-    await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
-    await faceapi.nets.faceLandmark68Net.loadFromUri('models');
-    await faceapi.nets.faceRecognitionNet.loadFromUri('models');
-    await faceapi.nets.faceExpressionNet.loadFromUri('models');
+
+    await faceapi.nets.tinyFaceDetector.loadFromUri('node_modules/@vladmandic/face-api/model');
+    await faceapi.nets.faceLandmark68Net.loadFromUri('node_modules/@vladmandic/face-api/model');
+    await faceapi.nets.faceRecognitionNet.loadFromUri('node_modules/@vladmandic/face-api/model');
+    await faceapi.nets.faceExpressionNet.loadFromUri('node_modules/@vladmandic/face-api/model');
+
 
     const video = document.getElementById('my-video');
 
